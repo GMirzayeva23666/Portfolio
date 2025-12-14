@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Setup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #6366f1;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .step {
+            background: #f8fafc;
+            border-left: 4px solid #6366f1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #6366f1;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .step h3 {
+            color: #1e293b;
+            display: inline-block;
+            font-size: 1.3rem;
+        }
+        
+        .step p {
+            margin: 10px 0 0 50px;
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .step ul {
+            margin: 10px 0 0 70px;
+            list-style: disc;
+        }
+        
+        .step li {
+            margin: 5px 0;
+        }
+        
+        .success-box {
+            background: #dcfce7;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box strong {
+            color: #15803d;
+        }
+        
+        .info-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .info-box strong {
+            color: #1e40af;
+        }
+        
+        .warning-box {
+            background: #fed7aa;
+            border-left: 4px solid #f97316;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box strong {
+            color: #b45309;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #6366f1;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .button:hover {
+            background: #4f46e5;
+        }
+        
+        .button-secondary {
+            background: #e2e8f0;
+            color: #6366f1;
+            border: 2px solid #6366f1;
+        }
+        
+        .button-secondary:hover {
+            background: #6366f1;
+            color: white;
+        }
+        
+        .checklist {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .checklist ul {
+            list-style: none;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checklist input {
+            margin-right: 10px;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .timer {
+            background: #f0f9ff;
+            border: 2px solid #0284c7;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            color: #0c4a6e;
+            font-weight: 600;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #ec4899;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+            color: #666;
+        }
+        
+        .emoji {
+            font-size: 1.3rem;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="emoji">🚀</span>Portfolio Website Setup Guide</h1>
+        <p class="subtitle">Get your professional portfolio online in 5 minutes!</p>
+        
+        <div class="info-box">
+            <strong>ℹ️ Welcome!</strong> This guide walks you through launching your portfolio website. No coding experience needed!
+        </div>
+        
+        <div class="timer">
+            ⏱️ Total time needed: ~90 minutes from start to live website
+        </div>
+        
+        <!-- Step 1 -->
+        <div class="step">
+            <span class="step-number">1</span>
+            <h3>Preview Your Website (2 minutes)</h3>
+            <p>Let's see what you're working with!</p>
+            <ul>
+                <li>Right-click on <code>index.html</code></li>
+                <li>Select "Open with Live Server" (VS Code extension)</li>
+                <li>Or simply double-click <code>index.html</code></li>
+                <li>Your website should open in your browser</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>💡 Tip:</strong> Click through all 3 pages (Home, About, Projects) to explore!</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step">
+            <span class="step-number">2</span>
+            <h3>Generate Placeholder Images (3 minutes)</h3>
+            <p>Create temporary images while you prepare your real ones.</p>
+            <ul>
+                <li>Open <code>placeholder-generator.html</code> in your browser</li>
+                <li>Click the download buttons for each image type</li>
+                <li>Save images to the <code>assets/images/</code> folder</li>
+                <li>Refresh your portfolio page to see placeholders</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>📝 Note:</strong> Replace these with your real images later!</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step">
+            <span class="step-number">3</span>
+            <h3>Update Your Personal Information (15 minutes)</h3>
+            <p>Replace placeholder content with your information.</p>
+            <ul>
+                <li>Open <code>index.html</code> in your text editor</li>
+                <li>Use Find & Replace (Ctrl+H)</li>
+                <li>Replace "John Doe" with your name</li>
+                <li>Update email, phone, location</li>
+                <li>Write your introduction paragraph</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>🔍 Tip:</strong> Repeat for <code>about.html</code> and <code>projects.html</code></p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="step">
+            <span class="step-number">4</span>
+            <h3>Add Your Images (20 minutes)</h3>
+            <p>Upload professional photos to replace placeholders.</p>
+            <ul>
+                <li>Take a professional profile photo (300×300px)</li>
+                <li>Screenshot your best projects (600×400px)</li>
+                <li>Save with exact names: <code>profile.jpg</code>, <code>project1.jpg</code>, etc.</li>
+                <li>Save all to <code>assets/images/</code> folder</li>
+                <li>Refresh browser to see updates</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>🖼️ Tip:</strong> Compress images at tinypng.com to keep file sizes small</p>
+        </div>
+        
+        <!-- Step 5 -->
+        <div class="step">
+            <span class="step-number">5</span>
+            <h3>Customize Your Design (10 minutes)</h3>
+            <p>Make it match your personal brand.</p>
+            <ul>
+                <li>Open <code>assets/css/style.css</code></li>
+                <li>Find the <code>:root</code> section (around line 6)</li>
+                <li>Change color values:</li>
+                <li style="margin-left: 20px;">--primary-color: #6366f1 → your color</li>
+                <li style="margin-left: 20px;">--secondary-color: #ec4899 → your color</li>
+                <li>Save and refresh to see changes</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>🎨 Tip:</strong> Use coolors.co to generate color palettes</p>
+        </div>
+        
+        <!-- Step 6 -->
+        <div class="step">
+            <span class="step-number">6</span>
+            <h3>Test Thoroughly (10 minutes)</h3>
+            <p>Make sure everything works perfectly.</p>
+            <ul>
+                <li>Test on desktop browser</li>
+                <li>Test on mobile (F12 → Toggle Device Mode)</li>
+                <li>Click all navigation links</li>
+                <li>Verify all images load correctly</li>
+                <li>Check contact links work</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>✅ Tip:</strong> Get a friend to review from their phone!</p>
+        </div>
+        
+        <!-- Step 7 -->
+        <div class="step">
+            <span class="step-number">7</span>
+            <h3>Deploy Online (5-15 minutes)</h3>
+            <p>Launch your portfolio on the internet!</p>
+            <p style="margin-top: 10px;"><strong>Choose one option:</strong></p>
+            <ul>
+                <li><strong>GitHub Pages</strong> (Free) - 10 min setup</li>
+                <li><strong>Netlify</strong> (Free) - 2 min setup (easiest!)</li>
+                <li><strong>Vercel</strong> (Free) - 2 min setup</li>
+                <li><strong>Your own hosting</strong> - 15 min setup</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>🚀 Recommendation:</strong> Use Netlify - it's the fastest!</p>
+        </div>
+        
+        <!-- Deployment Options -->
+        <h2 style="margin-top: 40px; color: #6366f1;">Deployment Options</h2>
+        
+        <div class="step">
+            <h3><span class="emoji">🌐</span>Netlify (Fastest - Recommended)</h3>
+            <ul>
+                <li>Go to <code>netlify.com</code></li>
+                <li>Sign up with GitHub</li>
+                <li>Connect your portfolio folder</li>
+                <li>Click "Deploy"</li>
+                <li>Your site is live in 1 minute! 🎉</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h3><span class="emoji">📱</span>GitHub Pages</h3>
+            <ul>
+                <li>Create GitHub account (if you don't have one)</li>
+                <li>Create new repository</li>
+                <li>Upload portfolio files</li>
+                <li>Enable Pages in settings</li>
+                <li>Your site is at: <code>username.github.io/portfolio</code></li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h3><span class="emoji">🔧</span>Your Own Web Host</h3>
+            <ul>
+                <li>Get FTP credentials from your host</li>
+                <li>Upload portfolio folder via FTP</li>
+                <li>Point domain to hosting</li>
+                <li>Your site is live!</li>
+            </ul>
+        </div>
+        
+        <!-- Checklist -->
+        <h2 style="margin-top: 40px; color: #6366f1;">Pre-Launch Checklist</h2>
+        
+        <div class="checklist">
+            <ul>
+                <li><input type="checkbox"> All personal information is accurate</li>
+                <li><input type="checkbox"> All images are high quality</li>
+                <li><input type="checkbox"> Tested on desktop browser</li>
+                <li><input type="checkbox"> Tested on mobile device</li>
+                <li><input type="checkbox"> No broken links</li>
+                <li><input type="checkbox"> No spelling errors</li>
+                <li><input type="checkbox"> Contact information works</li>
+                <li><input type="checkbox"> Social links are correct</li>
+                <li><input type="checkbox"> Design looks professional</li>
+                <li><input type="checkbox"> Deployed and live online</li>
+            </ul>
+        </div>
+        
+        <!-- Success -->
+        <div class="success-box">
+            <strong>🎉 Success!</strong> Once all items are checked, your portfolio is ready to share with the world!
+        </div>
+        
+        <!-- Next Steps -->
+        <h2 style="margin-top: 40px; color: #6366f1;">What to Do Next</h2>
+        
+        <div class="step">
+            <h3>After Launch</h3>
+            <ul>
+                <li>Share on LinkedIn</li>
+                <li>Share on Twitter/social media</li>
+                <li>Email to your network</li>
+                <li>Add to your resume</li>
+                <li>Monitor visitor feedback</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h3>Keep It Fresh</h3>
+            <ul>
+                <li>Add new projects regularly</li>
+                <li>Update skills as you learn them</li>
+                <li>Write blog posts (optional)</li>
+                <li>Gather testimonials</li>
+                <li>Monitor analytics</li>
+            </ul>
+        </div>
+        
+        <!-- Resources -->
+        <h2 style="margin-top: 40px; color: #6366f1;">Helpful Resources</h2>
+        
+        <div class="info-box">
+            <strong>📚 Documentation Files:</strong>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li><code>GETTING-STARTED.md</code> - Detailed setup guide</li>
+                <li><code>CUSTOMIZATION.md</code> - How to customize everything</li>
+                <li><code>README.md</code> - Complete documentation</li>
+                <li><code>QUICK-REFERENCE.md</code> - Quick lookup guide</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <strong>🔗 Useful Links:</strong>
+            <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                <li><a href="https://netlify.com">Netlify</a> - Easy deployment</li>
+                <li><a href="https://tinypng.com">TinyPNG</a> - Compress images</li>
+                <li><a href="https://coolors.co">Coolors</a> - Color palette generator</li>
+                <li><a href="https://unsplash.com">Unsplash</a> - Free stock photos</li>
+            </ul>
+        </div>
+        
+        <!-- Time Estimate -->
+        <h2 style="margin-top: 40px; color: #6366f1;">Time Estimate</h2>
+        
+        <div style="background: #f8fafc; padding: 20px; border-radius: 8px;">
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <th style="padding: 10px; border-bottom: 2px solid #e2e8f0;">Task</th>
+                    <th style="padding: 10px; border-bottom: 2px solid #e2e8f0;">Time</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">Preview website</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">2 min</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">Generate placeholders</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">3 min</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">Update information</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">15 min</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">Add images</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">20 min</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">Customize design</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">10 min</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">Test</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">10 min</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; background: #f0f9ff; font-weight: bold;">Deploy online</td>
+                    <td style="padding: 10px; background: #f0f9ff; font-weight: bold;">5-15 min</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; background: #dcfce7; font-weight: bold; font-size: 1.1rem;">TOTAL</td>
+                    <td style="padding: 10px; background: #dcfce7; font-weight: bold; font-size: 1.1rem;">~90 minutes</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Final Message -->
+        <div class="success-box" style="text-align: center; margin: 40px 0;">
+            <strong style="font-size: 1.2rem;">You have everything you need!</strong>
+            <p style="margin: 10px 0 0 0;">Your portfolio is professional, modern, and ready to impress.</p>
+            <p style="margin: 10px 0 0 0;">Let's get started! 🚀</p>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div style="text-align: center; margin: 30px 0;">
+            <button class="button" onclick="window.location.href='index.html'">👀 Preview Portfolio</button>
+            <button class="button button-secondary" onclick="window.location.href='GETTING-STARTED.md'">📖 Read Full Guide</button>
+        </div>
+        
+        <div class="footer">
+            <p>Portfolio Website v1.0 | Made with ❤️ for your success</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Free to use • No coding experience needed • Fully customizable</p>
+        </div>
+    </div>
+</body>
+</html>
