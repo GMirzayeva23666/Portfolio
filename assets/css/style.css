@@ -605,7 +605,7 @@ body {
     margin-right: auto;
     padding-right: 60px;
     width: calc(50% - 20px);
-    text-align: right;
+    text-align: justify;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
@@ -613,7 +613,7 @@ body {
     margin-right: 0;
     padding-left: 60px;
     width: calc(50% - 20px);
-    text-align: left;
+    text-align: justify;
 }
 
 .timeline-marker {
@@ -1117,7 +1117,7 @@ body {
         width: calc(100% - 50px);
         margin-left: 40px;
         padding-right: 20px;
-        text-align: left;
+        text-align: justify;
     }
 
     .timeline-marker {
